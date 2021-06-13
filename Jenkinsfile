@@ -2,7 +2,7 @@ pipeline {
     agent {
         docker {
             image "maven:${MVN_VERSION}"
-            args "-v $(which docker):/usr/bin/docker"
+            args "-v $\(which docker\):/usr/bin/docker"
         }
     }
     stages {
