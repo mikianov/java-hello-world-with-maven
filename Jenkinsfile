@@ -2,8 +2,7 @@ pipeline {
     agent {
         docker {
             image "maven:${MVN_VERSION}"
-//           args "-v /var/run/docker.sock:/var/run/docker.sock"
-            args " -v $(which docker):/usr/bin/docker"
+            args "-v $(which docker):/usr/bin/docker"
         }
     }
     
